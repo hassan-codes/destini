@@ -41,7 +41,7 @@ class _StoryPageState extends State<StoryPage> {
                 flex: 12,
                 child: Center(
                   child: Text(
-                    storyBrain.getStory(),
+                    storyBrain.getStory() ?? 'Story text',
                     style: TextStyle(
                       fontSize: 25.0,
                     ),
@@ -59,7 +59,7 @@ class _StoryPageState extends State<StoryPage> {
                   },
                   color: Colors.red,
                   child: Text(
-                    storyBrain.getChoice1(),
+                    storyBrain.getChoice1() ?? 'Choice 1',
                     style: TextStyle(
                       fontSize: 20.0,
                     ),
@@ -82,7 +82,7 @@ class _StoryPageState extends State<StoryPage> {
                   },
                   color: Colors.blue,
                   child: Text(
-                    storyBrain.getChoice2(),
+                    storyBrain.getChoice2() ?? 'Choice 2',
                     style: TextStyle(
                       fontSize: 20.0,
                     ),
