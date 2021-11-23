@@ -50,21 +50,18 @@ class _StoryPageState extends State<StoryPage> {
               ),
               Expanded(
                 flex: 2,
-                child: Visibility(
-                  visible: storyBrain.buttonShouldBeVisible(),
-                  child: FlatButton(
-                    onPressed: () {
-                      //Choice 1 made by user.
-                      setState(() {
-                        storyBrain.nextStory(1);
-                      });
-                    },
-                    color: Colors.red,
-                    child: Text(
-                      storyBrain.getChoice1() ?? 'Choice 1',
-                      style: TextStyle(
-                        fontSize: 20.0,
-                      ),
+                child: FlatButton(
+                  onPressed: () {
+                    //Choice 1 made by user.
+                    setState(() {
+                      storyBrain.nextStory(1);
+                    });
+                  },
+                  color: Colors.red,
+                  child: Text(
+                    storyBrain.getChoice1() ?? 'Choice 1',
+                    style: TextStyle(
+                      fontSize: 20.0,
                     ),
                   ),
                 ),
